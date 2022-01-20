@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-md-4 mx-auto">
+    <div class="card">
+      <img src="prditc.png" alt="DragonBorn" class="card-img-top" />
+      <div class="card body">
+        <h2>30 $</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur
+          quam laboriosam ipsa, laudantium alias numquam.
+
+        </p>
+      </div>
+      <div class="card-footer">
+        <form action="/checkout" method="POST">
+          <script
+            src="https://checkout.stripe.com/checkout.js"
+            class="stripe-button"
+            data-key="pk_test_51KB0k4LZITrZk5TFVBnMebPPuz193A6ng1ReB17GH9inN2Rlf9i9jCXvHXz2WHRbpx9ZVgsWfdmEc4FsZVJbtAuy00RxkAFJjV"
+            data-name="DragonBorn"
+            data-description="RedDragon"
+            data-amount="{{ORDER_AMOUNT}}"
+            data-currency="brl"
+            data-image="logo.png"
+          >
+          </script>
+          <script>
+            document.getElementsByClassName('stripe-button-el')[0].style.display //OCULTAR BOTON POR DEFECTO
+            = 'none';
+          </script>
+          <button class="btn btn-primary btn-lg btn-block">
+            BUY
+            <i class="fas fa-shopping-cart"></i>
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
